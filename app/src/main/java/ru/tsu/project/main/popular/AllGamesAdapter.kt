@@ -9,7 +9,7 @@ import ru.tsu.project.R
 import ru.tsu.project.databinding.ItemGameBinding
 import ru.tsu.project.network.games.GameDetails
 
-class AllGamesAdapter: RecyclerView.Adapter<AllGamesAdapter.PopularVH>() {
+class AllGamesAdapter(val listener: GameListener): RecyclerView.Adapter<AllGamesAdapter.PopularVH>() {
 
     var items: List<GameDetails> = emptyList()
     set(value) {
@@ -25,6 +25,10 @@ class AllGamesAdapter: RecyclerView.Adapter<AllGamesAdapter.PopularVH>() {
             with(binding) {
                 Glide.with(root).load(item.previewUrl).into(cardImage)
                 gameText.text = item.title
+
+                root.setOnClickListener {
+                    listener.onClick()
+                }
             }
         }
     }
@@ -39,4 +43,8 @@ class AllGamesAdapter: RecyclerView.Adapter<AllGamesAdapter.PopularVH>() {
     }
 
     override fun getItemCount() = items.size
+
+    interface GameListener {
+        fun onClick()
+    }
 }

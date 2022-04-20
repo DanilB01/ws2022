@@ -12,6 +12,7 @@ import retrofit2.HttpException
 import ru.tsu.project.R
 import ru.tsu.project.common.DialogUtils
 import ru.tsu.project.databinding.ActivityPopularBinding
+import ru.tsu.project.game.GameActivity
 import ru.tsu.project.main.profile.ProfileActivity
 import ru.tsu.project.main.rank.RankActivity
 import ru.tsu.project.network.ApiRepo
@@ -22,7 +23,12 @@ class PopularActivity : AppCompatActivity(R.layout.activity_popular) {
     private val binding: ActivityPopularBinding by viewBinding()
     private val api by lazy { ApiRepo(Network.retrofit) }
     private val popularAdapter by lazy { PopularAdapter() }
-    private val allGamesAdapter by lazy { AllGamesAdapter() }
+    private val allGamesAdapter by lazy { AllGamesAdapter(object : AllGamesAdapter.GameListener {
+        override fun onClick() {
+            startActivity(Intent(this@PopularActivity, GameActivity::class.java))
+        }
+
+    }) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
