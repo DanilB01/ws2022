@@ -12,6 +12,7 @@ import retrofit2.HttpException
 import ru.tsu.project.R
 import ru.tsu.project.common.DialogUtils
 import ru.tsu.project.databinding.ActivityPopularBinding
+import ru.tsu.project.main.profile.ProfileActivity
 import ru.tsu.project.main.rank.RankActivity
 import ru.tsu.project.network.ApiRepo
 import ru.tsu.project.network.Network
@@ -30,6 +31,10 @@ class PopularActivity : AppCompatActivity(R.layout.activity_popular) {
             when(it.itemId) {
                 R.id.rankItem -> {
                     startActivity(Intent(this, RankActivity::class.java))
+                    finish()
+                }
+                R.id.profileItem -> {
+                    startActivity(Intent(this, ProfileActivity::class.java))
                     finish()
                 }
             }

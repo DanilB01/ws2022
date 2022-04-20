@@ -14,6 +14,9 @@
         android:theme="@style/Theme.Project"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".main.profile.ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".main.rank.RankActivity"
             android:exported="false" />
         <activity

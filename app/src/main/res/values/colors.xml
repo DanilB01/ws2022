@@ -18,4 +18,6 @@
     <color name="activeColor">#19DEEB</color>
 
     <color name="rankColor">#424072</color>
+
+    <color name="gameColor">#E94764</color>
 </resources>
