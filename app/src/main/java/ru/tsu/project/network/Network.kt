@@ -9,6 +9,7 @@ import ru.tsu.project.network.token.TokenResponse
 
 object Network {
     lateinit var token: TokenResponse
+    lateinit var gameId: String
 
     private val interceptor = HttpLoggingInterceptor().apply {
         level = HttpLoggingInterceptor.Level.BODY

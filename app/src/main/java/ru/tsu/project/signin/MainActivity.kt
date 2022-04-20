@@ -11,7 +11,7 @@ import retrofit2.HttpException
 import ru.tsu.project.R
 import ru.tsu.project.common.DialogUtils
 import ru.tsu.project.databinding.ActivityMainBinding
-import ru.tsu.project.main.PopularActivity
+import ru.tsu.project.main.popular.PopularActivity
 import ru.tsu.project.network.ApiRepo
 import ru.tsu.project.network.Network
 import ru.tsu.project.network.login.LoginForm

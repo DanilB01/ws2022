@@ -4,24 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/mainColor"
-    tools:context=".main.popular.PopularActivity">
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/horizontalRecycler"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="16dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:listitem="@layout/item_horizontal_card" />
+    tools:context=".main.rank.RankActivity"
+    android:background="@color/mainColor">
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Популярно"
+        android:text="Рейтинг"
         android:textColor="@color/white"
         android:layout_marginTop="16dp"
         android:layout_marginStart="24dp"
@@ -30,27 +20,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:text="Все игры"
-        android:textColor="@color/white"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalRecycler" />
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/allGamesRecycler"
+        android:id="@+id/rankRecycler"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="16dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toTopOf="@+id/bottomView"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        tools:listitem="@layout/item_game" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomView"

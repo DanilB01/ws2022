@@ -1,7 +1,9 @@
-package ru.tsu.project.main
+package ru.tsu.project.main.popular
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import by.kirich1409.viewbindingdelegate.viewBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -10,6 +12,7 @@ import retrofit2.HttpException
 import ru.tsu.project.R
 import ru.tsu.project.common.DialogUtils
 import ru.tsu.project.databinding.ActivityPopularBinding
+import ru.tsu.project.main.rank.RankActivity
 import ru.tsu.project.network.ApiRepo
 import ru.tsu.project.network.Network
 
@@ -23,11 +26,22 @@ class PopularActivity : AppCompatActivity(R.layout.activity_popular) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        binding.bottomView.setOnNavigationItemSelectedListener { it ->
+            when(it.itemId) {
+                R.id.rankItem -> {
+                    startActivity(Intent(this, RankActivity::class.java))
+                    finish()
+                }
+            }
+            true
+        }
+
         binding.horizontalRecycler.adapter = popularAdapter
         binding.allGamesRecycler.adapter = allGamesAdapter
         GlobalScope.launch(Dispatchers.Main) {
             try {
                 val items = api.getGames()
+                Network.gameId = items.first().id
                 popularAdapter.items = items
                 allGamesAdapter.items = items
             } catch (e: HttpException) {

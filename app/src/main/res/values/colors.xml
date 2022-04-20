@@ -16,4 +16,6 @@
 
     <color name="nonactiveColor">#72709B</color>
     <color name="activeColor">#19DEEB</color>
+
+    <color name="rankColor">#424072</color>
 </resources>
