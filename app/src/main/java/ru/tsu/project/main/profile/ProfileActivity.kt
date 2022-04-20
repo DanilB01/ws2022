@@ -36,12 +36,12 @@ class ProfileActivity : AppCompatActivity(R.layout.activity_profile) {
             true
         }
 
-        GlobalScope.launch(Dispatchers.Main) {
+        /*GlobalScope.launch(Dispatchers.Main) {
             try {
                 val
             } catch (e: HttpException) {
                 DialogUtils.createDialog(this@ProfileActivity)
             }
-        }
+        }*/
     }
 }
