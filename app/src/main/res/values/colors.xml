@@ -13,4 +13,7 @@
     <color name="mainColor">#23223A</color>
     <color name="hintColor">#8D89E8</color>
     <color name="buttonColor">#19DEEB</color>
+
+    <color name="nonactiveColor">#72709B</color>
+    <color name="activeColor">#19DEEB</color>
 </resources>
