@@ -4,8 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/user/Desktop/repositoryWS/ws2022/app/src/main/res/drawable/shape_input_field.xml" value="0.223" />
+        <entry key="..\:/Users/user/Desktop/repositoryWS/ws2022/app/src/main/res/drawable/shape_play_button.xml" value="0.223" />
         <entry key="..\:/Users/user/Desktop/repositoryWS/ws2022/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Users/user/Desktop/repositoryWS/ws2022/app/src/main/res/layout/activity_popular.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/user/Desktop/repositoryWS/ws2022/app/src/main/res/layout/activity_popular.xml" value="0.264" />
+        <entry key="..\:/Users/user/Desktop/repositoryWS/ws2022/app/src/main/res/layout/item_game.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/user/Desktop/repositoryWS/ws2022/app/src/main/res/layout/item_horizontal_card.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/user/Desktop/repositoryWS/ws2022/app/src/main/res/layout/item_vertical_card.xml" value="0.4" />
       </map>
     </option>
   </component>
